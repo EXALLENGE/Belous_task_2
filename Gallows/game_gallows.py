@@ -4,13 +4,24 @@ dict = ("apple", "orange", "mandarin", "watermelon", "strawberry")
 text = '''                  Game Gallows
 Rules: 1. You need to guess the word on the topic of fruits
        2. You can be mistaken only 5 times 
-       3. By '*' denotes words that you haven't guessed
+       3. By '*' denotes letters that you haven't guessed
        4. All letters of the word are small 
        
 If you want to start the game, press - '1'
-If you want exit the game press - '0'  '''
+If you want exit the game, press - '0'  '''
 print (text)
-if int(input()) == 1:
+
+while True:
+    choice = input()
+    if choice == "1":
+        break
+    elif choice == "0":
+        break
+    else:
+        print("You need to press - '1' or '0'. Please try again")
+
+
+if choice == "1":
     word = dict[random.randint(0, 4)]
     print ("Word you need to guess:", end = " ")
     check = []
@@ -43,9 +54,6 @@ if int(input()) == 1:
         print("You lost!")
     else:
         raise SystemExit
-
-
 else:
     raise SystemExit
-
 
