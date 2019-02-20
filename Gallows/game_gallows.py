@@ -52,6 +52,7 @@ if choice == "1":
             print(''.join(check))
     if mistake == 5:
         print("You lost!")
+        print("Right word is: " + word)
     else:
         raise SystemExit
 else:
